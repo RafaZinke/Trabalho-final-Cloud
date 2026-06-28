@@ -1,15 +1,21 @@
-# Forum API
+Forum API
 
-API REST de um **Fórum Online**, desenvolvida para o Trabalho Final da disciplina de
-Cloud Computing (UNIDAVI). Construída com **Python + FastAPI**, com testes unitários
-em `pytest` e pipeline de Integração Contínua no GitHub Actions.
+API REST de um Fórum Online, desenvolvida para o Trabalho Final da disciplina de
+Cloud Computing (UNIDAVI). Construída com Python + FastAPI, com testes unitários
+em pytest, análise estática com ruff e pipeline de Integração Contínua no GitHub Actions.
 
-## Estrutura do projeto
 
-```
-forum-api/
+Autor: Rafael Zink
+Tema individual: Sistema de Fórum Online
+Repositório: https://github.com/RafaZinke/Trabalho-final-Cloud
+
+
+Estrutura do projeto
+
+Trabalho-final-Cloud/
 ├── api/
 │   ├── app.py              # Código-fonte da API
+│   ├── __init__.py
 │   ├── data/
 │   │   └── topicos.json    # Dados simulados (12 tópicos)
 │   └── tests/
@@ -17,60 +23,69 @@ forum-api/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml          # Pipeline de CI
+├── Dockerfile
 ├── requirements.txt
+├── .gitignore
 └── README.md
-```
 
-## Rotas
+Rotas
 
-| Método | Rota              | Descrição                                  |
-|--------|-------------------|--------------------------------------------|
-| GET    | `/status`         | Saúde da aplicação (nome, versão, status)  |
-| GET    | `/topicos`        | Lista todos os tópicos do fórum            |
-| GET    | `/topicos/{id}`   | Retorna um tópico pelo identificador       |
+MétodoRotaDescriçãoGET/statusSaúde da aplicação (nome, versão, status)GET/topicosLista todos os tópicos do fórum + totalGET/topicos/{id}Retorna um único tópico pelo identificador
 
-Códigos HTTP: `200` (sucesso), `404` (tópico inexistente).
+Códigos HTTP retornados: 200 (sucesso) e 404 (tópico inexistente).
+Documentação interativa (Swagger) disponível em /docs.
 
-## Pré-requisitos
+Pré-requisitos
 
-- Python 3.12+
-- (Opcional) Docker, para execução em container
 
-## Execução local (sem container)
+Python 3.12+
+(Opcional) Docker, para execução em container
 
-```bash
-# 1. Criar e ativar um ambiente virtual
+
+Execução local (sem container)
+
+bash# 1. Criar e ativar um ambiente virtual
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
+.venv\Scripts\activate           # Windows (PowerShell)
+# source .venv/bin/activate      # Linux/macOS
 
-# 2. Instalar dependências
+# 2. Instalar as dependências
 pip install -r requirements.txt
 
 # 3. Subir a API (a partir da raiz do projeto)
-uvicorn api.app:app --reload
-```
+python -m uvicorn api.app:app --reload
 
-A API ficará disponível em `http://127.0.0.1:8000`.
-Documentação interativa (Swagger) em `http://127.0.0.1:8000/docs`.
+A API ficará disponível em http://127.0.0.1:8000.
+Acesse http://127.0.0.1:8000/docs para a documentação interativa (Swagger).
 
-## Execução com container (Docker)
 
-```bash
-# Construir a imagem
+Observação (Windows): caso os comandos uvicorn, pytest ou ruff não sejam
+reconhecidos diretamente no PowerShell (por não estarem no PATH), execute-os por meio
+do interpretador, na forma python -m <ferramenta>, conforme mostrado acima.
+
+
+
+Execução com container (Docker)
+
+bash# Construir a imagem
 docker build -t forum-api .
 
 # Rodar o container
 docker run -p 8000:8000 forum-api
-```
 
-## Rodando os testes
+A API ficará acessível em http://127.0.0.1:8000.
 
-```bash
-python -m pytest -v
-```
+Rodando os testes
 
-## Lint
+bashpython -m pytest -v
 
-```bash
-ruff check api/
-```
+Análise estática (lint)
+
+bashpython -m ruff check api/
+
+Integração Contínua
+
+A cada push ou pull request, o GitHub Actions executa automaticamente o pipeline
+definido em .github/workflows/ci.yml, que realiza o checkout do código, configura o
+ambiente Python, instala as dependências, roda o ruff (lint) e executa os testes com
+pytest. Se qualquer etapa falhar, o pipeline é marcado como malsucedido.

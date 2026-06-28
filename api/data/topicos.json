@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "titulo": "Como configurar ambiente Python no Windows?",
+    "autor": "marina_dev",
+    "categoria": "Programacao",
+    "respostas": 14,
+    "visualizacoes": 1320,
+    "fixado": true,
+    "data_criacao": "2026-01-12T09:30:00"
+  },
+  {
+    "id": 2,
+    "titulo": "Diferença entre lista e tupla em Python",
+    "autor": "joao_souza",
+    "categoria": "Programacao",
+    "respostas": 8,
+    "visualizacoes": 642,
+    "fixado": false,
+    "data_criacao": "2026-01-15T14:05:00"
+  },
+  {
+    "id": 3,
+    "titulo": "Regras gerais e termos de uso do fórum",
+    "autor": "admin",
+    "categoria": "Avisos",
+    "respostas": 2,
+    "visualizacoes": 4810,
+    "fixado": true,
+    "data_criacao": "2026-01-02T08:00:00"
+  },
+  {
+    "id": 4,
+    "titulo": "Melhor monitor para programar em 2026?",
+    "autor": "carla_tech",
+    "categoria": "Hardware",
+    "respostas": 27,
+    "visualizacoes": 2190,
+    "fixado": false,
+    "data_criacao": "2026-02-01T19:42:00"
+  },
+  {
+    "id": 5,
+    "titulo": "Dúvida sobre Docker Compose e volumes",
+    "autor": "rafael_zink",
+    "categoria": "DevOps",
+    "respostas": 11,
+    "visualizacoes": 905,
+    "fixado": false,
+    "data_criacao": "2026-02-08T11:20:00"
+  },
+  {
+    "id": 6,
+    "titulo": "Apresente-se à comunidade!",
+    "autor": "moderacao",
+    "categoria": "Geral",
+    "respostas": 156,
+    "visualizacoes": 8730,
+    "fixado": true,
+    "data_criacao": "2026-01-03T10:15:00"
+  },
+  {
+    "id": 7,
+    "titulo": "GitHub Actions falhando no step de testes",
+    "autor": "djonatan_o",
+    "categoria": "DevOps",
+    "respostas": 6,
+    "visualizacoes": 488,
+    "fixado": false,
+    "data_criacao": "2026-02-14T16:50:00"
+  },
+  {
+    "id": 8,
+    "titulo": "Vale a pena aprender Rust em 2026?",
+    "autor": "lucas_p",
+    "categoria": "Programacao",
+    "respostas": 33,
+    "visualizacoes": 3055,
+    "fixado": false,
+    "data_criacao": "2026-02-20T20:10:00"
+  },
+  {
+    "id": 9,
+    "titulo": "Recomendações de livros sobre arquitetura de software",
+    "autor": "marcus_d",
+    "categoria": "Carreira",
+    "respostas": 19,
+    "visualizacoes": 1467,
+    "fixado": false,
+    "data_criacao": "2026-03-01T13:00:00"
+  },
+  {
+    "id": 10,
+    "titulo": "Erro 504 Gateway Timeout em API Flask",
+    "autor": "cristhian_m",
+    "categoria": "Programacao",
+    "respostas": 9,
+    "visualizacoes": 712,
+    "fixado": false,
+    "data_criacao": "2026-03-05T10:35:00"
+  },
+  {
+    "id": 11,
+    "titulo": "Como organizar branches no Git em equipe?",
+    "autor": "marina_dev",
+    "categoria": "DevOps",
+    "respostas": 15,
+    "visualizacoes": 1188,
+    "fixado": false,
+    "data_criacao": "2026-03-10T09:00:00"
+  },
+  {
+    "id": 12,
+    "titulo": "Off-topic: qual música vocês ouvem programando?",
+    "autor": "ana_clara",
+    "categoria": "Geral",
+    "respostas": 41,
+    "visualizacoes": 2604,
+    "fixado": false,
+    "data_criacao": "2026-03-12T22:18:00"
+  }
+]
